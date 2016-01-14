@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rukhsar_Deleteorders>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rukhsar_Deleteorders>
+    </modules>
+</config>

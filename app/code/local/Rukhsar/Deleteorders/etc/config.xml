@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rukhsar_Deleteorders>
+            <version>1.0.0</version>
+        </Rukhsar_Deleteorders>
+    </modules>
+    <admin>
+        <routers>
+			<deleteorders>
+				<use>admin</use>
+				<args>
+					<module>Rukhsar_Deleteorders</module>
+					<frontName>deleteorders</frontName>
+				</args>
+			</deleteorders>
+        </routers>
+    </admin>
+    <adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Rukhsar_Deleteorders>
+							<title>Delete Orders Module</title>
+							<sort_order>10</sort_order>
+						</Rukhsar_Deleteorders>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+    <global>
+        <blocks>
+	 		<adminhtml>
+            <rewrite>
+                <sales_order_grid>Rukhsar_Deleteorders_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+            </rewrite>
+           <rewrite>
+                <sales_order_view>Rukhsar_Deleteorders_Block_Adminhtml_Sales_Order_View</sales_order_view>
+            </rewrite>
+         </adminhtml>
+            <deleteorders>
+                <class>Rukhsar_Deleteorders_Block</class>
+            </deleteorders>
+        </blocks>
+        <helpers>
+            <deleteorders>
+                <class>Rukhsar_Deleteorders_Helper</class>
+            </deleteorders>
+        </helpers>
+    </global>
+</config>
